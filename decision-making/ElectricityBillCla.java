@@ -27,6 +27,5 @@ public class ElectricityBillCla {
             }
             System.out.println("Electricity Bill: ₹" + bill);
       }
-
-  }
+}
 } 
