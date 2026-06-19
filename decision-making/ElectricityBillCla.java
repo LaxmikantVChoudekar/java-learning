@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ElectricityBillCla {
     public static void main(String[] args) {
-    int unit, bill=0;
+    int unit, bill;
     System.out.print("enter electricity unit ");
     Scanner ip = new Scanner(System.in);
     unit = ip.nextInt();
