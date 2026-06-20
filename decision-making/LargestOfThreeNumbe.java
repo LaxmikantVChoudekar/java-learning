@@ -9,6 +9,7 @@ public class LargestOfThreeNumbe {
         number1=ip.nextInt();
         number2=ip.nextInt();
         number3=ip.nextInt();
+        ip.close();
         if(number1>number2 && number1>number3){
             largestInt = number1;
         }
