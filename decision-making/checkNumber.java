@@ -6,7 +6,7 @@ public class checkNumber {
         System.out.print("enter any number = ");
         Scanner ip = new Scanner(System.in);
         number = ip.nextInt();
-
+        ip.close();
         if(number < 0)
         {
             System.out.print("given number are negative .");
