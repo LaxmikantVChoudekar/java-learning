@@ -8,6 +8,7 @@ public class checkLeapYear {
         System.out.print("enter year = ");
         Scanner ip = new Scanner(System.in);
         year = ip.nextInt();
+        ip.close();
         if(year%4==0)
         {
             isLeapYear = true;
