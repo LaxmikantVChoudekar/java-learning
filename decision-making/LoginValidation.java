@@ -16,6 +16,7 @@ public class LoginValidation {
         userName1 = ip.nextLine();
         System.out.print("\nenter password = ");
         password1 = ip.nextLine();
+        ip.close();
         if (userName.compareTo(userName1) == 0 && password.compareTo(password1) == 0)
         {
             System.out.println("login sucessfully :");
