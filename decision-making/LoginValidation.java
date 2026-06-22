@@ -10,14 +10,14 @@ public class LoginValidation {
         userName = ip.nextLine();
         System.out.print("\npassword = ");
         password = ip.nextLine();
-        System.out.println("\n    longin account ");
+        System.out.println("\n    login account ");
         System.out.print("userName = ");
         String userName1 , password1 ;
         userName1 = ip.nextLine();
         System.out.print("\nenter password = ");
         password1 = ip.nextLine();
         ip.close();
-        if (userName.compareTo(userName1) == 0 && password.compareTo(password1) == 0)
+        if (userName.equals(userName1)  && password.equals(password1) )
         {
             System.out.println("login sucessfully :");
         }
