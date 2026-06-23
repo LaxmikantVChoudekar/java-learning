@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class TraficLightSystem {
     public static void main(String[]arg ) {
         String traficColor ;
