@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class checkNumber {
     public static void main (String []arg){
         int number;
