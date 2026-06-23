@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class LoginValidation {
     public static void main(String []arg)
     {
