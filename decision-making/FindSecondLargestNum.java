@@ -9,29 +9,14 @@ class  FindSecondLargestNum
         num2 = sc.nextInt();
         num3 = sc.nextInt();
         sc.close();
-        if(num1 > num2 && num1 > num3){
-           if(num2 > num3){
-               secondMax = num2 ;
-           }
-           else {
-               secondMax = num3 ;
-           }
+       if (num1 < num2 && num1 > num3 || num1 > num2 && num1 < num3 ){
+           secondMax = num1;
        }
-       else if(num2 > num3 && num2 > num1){
-           if(num1 > num3){
-               secondMax = num1 ;
-           }
-           else {
-               secondMax = num3 ;
-           }
+       else if (num2 < num1 && num2 > num3 ||  num2 > num1 && num2 < num3 ){
+           secondMax = num2;
        }
        else {
-               if(num1 > num2){
-                   secondMax = num1;
-               }
-               else {
-                   secondMax = num2;
-               }
+           secondMax = num3;
        }
        System.out.println("2nd largest number is = "+ secondMax );
     }
