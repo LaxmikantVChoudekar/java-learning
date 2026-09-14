@@ -6,6 +6,7 @@ class StudentMarksAnalizer {
         final int totalSub = 5;
 
         Scanner sc = new Scanner(System.in);
+        //numOfstudnt must positive
         do {
             System.out.println("Enter number of students ");
             numOfStudent = sc.nextInt();
@@ -14,6 +15,7 @@ class StudentMarksAnalizer {
             }
         } while (numOfStudent <= 0);
 
+        //taking sub name
         String sub[] = new String[totalSub];
         System.out.println("Enter subject names ");
         for (int i = 0; i < totalSub; i++) {
@@ -22,23 +24,26 @@ class StudentMarksAnalizer {
         System.out.println();
 
         char grade[] = new char[numOfStudent];
+        //classdata store all student marks
         int classdata[][] = new int[numOfStudent][totalSub];
         System.out.print("Enter student marks \n");
         for (int i = 0; i < numOfStudent; i++) {
             System.out.println("Roll No. " + (i + 1));
             for (int j = 0; j < totalSub; j++) {
-                System.out.print(sub[j] + " = ");
+                System.out.print(sub[j] + " = ");// sub index help to show sub name
                 classdata[i][j] = sc.nextInt();
+
                 if (classdata[i][j] < 35) {
                     grade[i] = 'F';
                 }
             }
             System.out.println();
         }
+        sc.close();
 
         int totalMarks[] = new int[numOfStudent];
         float percentage[] = new float[numOfStudent];
-
+        //calculate total marks and percerntage
         for (int i = 0; i < numOfStudent; i++) {
             for (int j = 0; j < totalSub; j++) {
                 totalMarks[i] += classdata[i][j];
@@ -47,6 +52,7 @@ class StudentMarksAnalizer {
         }
 
         for (int i = 0; i < numOfStudent; i++) {
+            //if it not has  default value so contunue
             if (grade[i] != '\u0000') {
                 continue;
             }
@@ -63,12 +69,18 @@ class StudentMarksAnalizer {
         float highestPer = percentage[0];
         float lowestPer = percentage[0];
         float classAve = 0;
+        //calculate calssAve , highest ,lowest marks ,num of fial and pass
         for (int i = 0; i < numOfStudent; i++) {
+            //show all student data
             System.out.println("Roll No. " + (i + 1) + ", Total = " + totalMarks[i] + ", Percentage = " + percentage[i] + "% , Grade = " + grade[i]);
+            //adding all student percentages
             classAve += percentage[i];
+
             if (percentage[i] > highestPer) {
                 highestPer = percentage[i];
-            } else if (percentage[i] < lowestPer) {
+            }
+            //if percentage is greater than highestper so no need to commare to lowestper
+            else if (percentage[i] < lowestPer) {
                 lowestPer = percentage[i];
             }
             if (grade[i] == 'F') {
