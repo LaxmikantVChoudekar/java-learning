@@ -8,7 +8,7 @@ class StudentMarksAnalizer {
         Scanner sc = new Scanner(System.in);
         //numOfstudnt must positive
         do {
-            System.out.println("Enter number of students ");
+            System.out.println("Enter numbe r of students ");
             numOfStudent = sc.nextInt();
             if (numOfStudent <= 0) {
                 System.out.println("xxxxxxx      Wrong input     xxxxxxxxxx\n");
