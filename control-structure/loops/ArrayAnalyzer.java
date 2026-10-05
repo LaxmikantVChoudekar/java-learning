@@ -34,6 +34,16 @@ public class ArrayAnalyzer {
         return largestNum;
      }
 
+     int secondLargNum(){
+        int secondLargNum =-99999999;
+        for(int item : array){
+            if (item >secondLargNum && item != largestNum){
+                secondLargNum =item;
+            }
+        }
+        return secondLargNum;
+     }
+
      int sum (){
         sum=0;
        for(int item : array){
@@ -79,13 +89,14 @@ public class ArrayAnalyzer {
 
       int smollestNUm = arrayAn.smollestNum();
       int largestNum = arrayAn.largestNum();
+      int secondLargNum = arrayAn.secondLargNum();
       int sum = arrayAn.sum();
       boolean isAssending = arrayAn.isAssending();
       float ave = arrayAn.ave();
       int larOcccurs = arrayAn.larOccurs();
       System.out.println("largest = " + largestNum);
       System.out.println("smallest = " + smollestNUm);
-      System.out.println("second largest = "+"?" );
+      System.out.println("second largest = "+ secondLargNum );
       System.out.println("largest occurs = "+ larOcccurs +" times");
       System.out.println("sum = "+ sum);
       System.out.println("average = "+ave);
